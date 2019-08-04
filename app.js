@@ -201,7 +201,7 @@ console.log("Edit item page!");
 });
 // Post url to edit products //
 app.post('/editsql/:id',isLoggedIn,isAdmin,function(req,res){
-let sql = 'UPDATE item SET title = "'+req.body.title+'",Price = '+req.body.price+',Genre = "'+req.body.genre+'",Quality = "'+req.body.quality+'",Description = "'+req.body.description+'" WHERE id = "'+req.params.id+'"'
+let sql = 'UPDATE item SET title = "'+req.body.title+'",Price = '+req.body.price+',Genre = "'+req.body.genre+'",brand = "'+req.body.brand+'",Quality = "'+req.body.quality+'",Description = "'+req.body.description+'" WHERE id = "'+req.params.id+'"'
         let query = db.query(sql, (err, res1) => {
         if(err) throw err;
         console.log("Oh dear,update failed")
