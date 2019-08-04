@@ -1,0 +1,22 @@
+<% include ../partials/adminheader %>
+    <h1>Edit User Information</h1>
+     <div class="row"><br>
+  <div class="grid-container">
+      <% res1.forEach(function(user) { %>
+         <form accept-charset="UTF-8" action="/editusersql/ <%= user.Id %>" method="post">
+             <div class="item">
+                 <label for="username">Username:</label>
+                 <input name="username" type="text" value="<%= user.username %>"  required/>
+                 
+                 <label for="email">Email:</label>
+                 <input name="email" type="text" value="<%= user.email %>"  required/>
+                 
+                <button class="button">Edit this user</button>
+         </div>
+         </form>   
+    </div>
+  <% }); %>
+</div>
+<% include ../partials/footer %>
+</body>
+</html>

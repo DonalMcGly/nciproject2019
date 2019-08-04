@@ -1,0 +1,41 @@
+<% include ../partials/header2 %>
+    <h1>Sell your product</h1>
+    <div class="row"><br>
+  <div class="grid-container">
+         <form accept-charset="UTF-8" id="uploadform" ref="uploadform"action="/newproduct" method="post" enctype="multipart/form-data">
+         <div class="item">
+             <input name="userid" type="hidden" value="<%= user.username %>"><br>
+             
+             <label for="title">Title:</label>
+             <input name="title" type="text" placeholder="Please enter product name" required />
+             
+             <label for="brand">Console:</label><br>
+             <b><input type="radio" name="brand" value="Xbox One" checked> Xbox One</b><br>
+             <b><input type="radio" name="brand" value="Playstation 4"> Playstation 4</b><br>
+             <b><input type="radio" name="brand" value="Nintendo Switch"> Nintendo Switch</b><br>
+             <b><input type="radio" name="brand" value="Retro"> Retro</b><br>
+             <br>
+              <label for="image">Image:</label><br>
+              <input class="button" type="file" name="sampleFile" required/><br>
+             
+             <label for="genre">Genre:</label>
+             <input name="genre" type="text" placeholder="Please enter a genre" required />
+             
+             <label for="description">Description:</label>
+             <input name="description" type="text" placeholder="Please enter a description" required />
+             
+             <label for="quality">Quality:</label>
+             <select name = "quality">
+                 <option value = "new" selected>New</option>
+                 <option value = "used">Used</option>
+            </select>
+             <label for="price">Price:</label>
+             <input name="price" type="text" placeholder="Please enter a price" pattern="\d+(\.\d{2})?" title="Enter price in format 0.00 " required/>
+    
+                
+              <button class="button">Create new item</button>
+         </div>
+         </form>   
+    </div>
+  
+</div>

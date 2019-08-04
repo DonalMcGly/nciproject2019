@@ -1,0 +1,42 @@
+<% include ../partials/header2 %>
+<div class="row">
+    <h2><%= user.username %>'s current cart</h2>
+    <div class="row">
+  <div class="grid-container">
+     <% res1.forEach(function(cart) { %>
+<form>
+<table align="center">
+  <tr>
+    <th>Title</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Remove</th>
+  </tr>
+  <tr>
+    <td><%= cart.name %></td>
+    <td>€ <%= cart.cartprice %></td>
+    <td><%= cart.quantity %></td>
+    <td><a href="/rmcart/<%= cart.cartid%>" class="btn btn-danger"><span class="glyphicon glyphicon-minus"></span></a></td>
+  </tr>
+</table><td>Current Total:€<%= cart.Total %></td>
+ </div>
+  
+</div></form>
+ <form  action="/pay" method="post" >
+        <script
+        src="//checkout.stripe.com/v2/checkout.js",
+        class="stripe-button",
+        data-key='pk_test_4DdFULH8jUoVC3YV0FcDvhxP009YMSHGEV',
+        data-locale="auto",
+        data-description="Payment",
+        data-amount=<%= cart.Total*100 %>>
+        </script>
+</form><% }); %>  
+</div>
+ 
+<a href="/empty/" class="btn btn-primary">Empty Cart</a>
+
+</body>
+</html>
+
+                       

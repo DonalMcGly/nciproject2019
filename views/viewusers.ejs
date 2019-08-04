@@ -1,0 +1,22 @@
+<% include ../partials/adminheader %>
+<div class="row">
+    <h2>All registered users are shown below,click an option to edit or remove them</h2>
+    <div class="row"><br>
+  <div class="grid-container">
+      <% res1.forEach(function(user) { %>    
+     <box> <div class="item">     
+                <div class="item">  
+                   <h1 class="itemp">User Id Number: <%= user.Id %></h1>
+                   <h1 class="itemp">Username: <%= user.username %></h1>
+                   <h1 class="itemp">Email: <%= user.email %></h1>
+                   <a href="/editusersql/<%= user.Id%>" class="button">Edit User</a>
+                   <a href="/deleteuser/<%= user.Id%>" class="button">Delete User</a>
+                </div>
+            </div></box>
+         <% }); %>
+    </div>
+
+</div>
+<% include ../partials/footer %>
+</body>
+</html>

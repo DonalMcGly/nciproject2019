@@ -1,0 +1,25 @@
+<% include ../partials/header2 %>
+    <h2>Please login to continue</h2>
+    <h2>Or click <a href="/register"> <font color="blue">Register</font></a></h2>
+    <div class="row"><br>
+    <% if (message.length > 0) { %>
+    <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+   <div class="grid-container">
+         <form accept-charset="UTF-8" ref="uploadform"action="/login" method="post" enctype="multipart/form-data">
+         <div class="item">
+             <label for="username">User name:</label>
+             <input name="username" type="text" placeholder="Please enter your user name" required />
+    
+             <label for="password">Password:</label>
+             <input name="password" type="password" placeholder="Please enter a valid password"  required/>
+    
+             <button type="submit" class="button">Login</button>
+         </div><div class="row"><a href="/adlogin/" class="btn btn-warning">Admin login</a></button>
+         </form>   
+    </div>
+</div>
+  
+<% include ../partials/footer %>
+</body>
+</html>

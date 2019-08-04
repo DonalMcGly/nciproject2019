@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+    <h1>Welcome to the Administrator Login Page</h1>
+    <h2>Sign in below</h2>
+    <div class="row"><br>
+   <div class="grid-container">
+         <form accept-charset="UTF-8" ref="uploadform"action="/adlogin" method="post" enctype="multipart/form-data">
+         <div class="item">
+             <label for="username">User name:</label>
+             <input name="username" type="text" placeholder="Please enter your user name" required />
+    
+             <label for="password">Password:</label>
+             <input name="password" type="password" placeholder="Please enter a valid password"  required/>
+    
+             <button type="submit" class="button">Login</button>
+         </div>
+         </form>   
+    </div>
+  
+</div>
+  
+    
+<% include ../partials/footer %>
+
+</body>
+    
+</html>

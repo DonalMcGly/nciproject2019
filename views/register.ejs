@@ -1,0 +1,35 @@
+<% include ../partials/header2 %>
+    <h1>User Registration Page</h1>
+    <div class="row"><br>	
+    <% if (message.length > 0) { %>
+		<div class="alert alert-danger"><%= message %></div>
+	<% } %>
+   <div class="grid-container">
+         <form accept-charset="UTF-8" action="/register" method="post" enctype="multipart/form-data">
+         <div class="item">
+             <label for="username">User name:</label>
+             <input name="username" type="text" placeholder="Please enter a username"  required/>
+    
+             <label for="email">Email Address:</label>
+             <input name="email" type="text" placeholder="Please enter a valid email address"  required/>
+    
+             <label for="password">Password:</label>
+             <input name="password" type="password" placeholder="Please enter a valid password"  required/>
+    
+             <button type="submit" class="button" onclick="myFunction()">Register</button>
+             <input type="reset" value="Reset">
+             
+         </div>
+         </form>   
+    </div>
+</div>
+<% include ../partials/footer %>
+
+<script>
+function myFunction() {
+  alert("Registration Completed!");
+}
+</script>
+</body>
+    
+</html>

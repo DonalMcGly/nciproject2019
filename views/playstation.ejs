@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+<div class="row">
+    <h1>Sony Playstation products</h1><a href="/playstation-high/" class="btn btn-success">Price: Highest first</a><a href="/playstation-low/" class="btn btn-success">Price: Lowest first</a>
+    <div class="row"><br>
+  <div class="grid-container">
+      <% res1.forEach(function(product) { %>    
+ <box> <div class="item">     
+                <div class="item">
+                   <h1 class="itemp"><%= product.title %></h1>
+                   <h1 class="itemp"><%= product.brand %></h1>
+                   <image src ="/<%= product.image %>" class="pimage"></image>
+                   <h1 class="itemp">Quality: <%= product.quality %></h1>
+                   <h1 class="itemp">Price: €<%= product.price %></h1>
+                   
+                   <a href="/viewitem/<%= product.id%>" class="button">View Item</a>
+                </div>
+            </div></box>
+         <% }); %>
+    </div>
+  </h1>
+</div>
+<% include ../partials/footer %>
+</body>
+</html>
