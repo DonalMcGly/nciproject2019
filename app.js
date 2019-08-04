@@ -34,13 +34,7 @@ app.use(flash());
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended: true}));
 ///////////////////////////// CONNECTION TO MYSQL ///////////////////
-var db = mysql.createConnection ({
- host: 'den1.mysql1.gear.host',
- user: 'consoletrader',
- password: 'password#',
- database: 'consoletrader',  
- multipleStatements: true
-});
+
 db.connect((err) => {
     if(err){
     console.log("Uh oh MySQL Connection failed :(")
