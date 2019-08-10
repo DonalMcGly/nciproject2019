@@ -1,7 +1,10 @@
-<% include ../partials/header %>
+<% include ../partials/header2 %>
     <h1>Welcome to the Administrator Login Page</h1>
     <h2>Sign in below</h2>
     <div class="row"><br>
+    <% if (message.length > 0) { %>
+    <div class="alert alert-danger"><%= message %></div>
+    <% } %>
    <div class="grid-container">
          <form accept-charset="UTF-8" ref="uploadform"action="/adlogin" method="post" enctype="multipart/form-data">
          <div class="item">
